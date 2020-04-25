@@ -1,2 +1,6 @@
-<h1><%= @article.title %></h1>
+<h1><%= @article.title %></h1><br>
 <p><%= @article.description %></p>
+
+<p><%= link_to "Back to Index", articles_path%></p><br>
+
+<p><%= link_to "Edit Artilce", edit_article_path(@article)%></p>
