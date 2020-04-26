@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'faker'
+
+puts '...'
+Article.destroy_all
+
+5.times do
+    Article.create(title: Faker::Book.title, description: Faker::Books::Lovecraft.sentence)
+end
